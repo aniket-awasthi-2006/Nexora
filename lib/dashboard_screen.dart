@@ -35,12 +35,15 @@ class _DashboardScreenState extends State<DashboardScreen> {
     ];
 
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 28, 28, 28),
+      backgroundColor: const Color.fromARGB(255, 25,25,25),
       body:SafeArea(
-        child: Stack(
+        top:false,
+        child: Container(
+          color: Color.fromARGB(255,30,30,30),
+          child: Stack(
           children: [
             Container(
-              margin: EdgeInsets.fromLTRB(0, 80, 0, 0),
+              margin: EdgeInsets.fromLTRB(0, 100, 0, 0),
               decoration: BoxDecoration(
                 gradient: LinearGradient(begin: Alignment.topCenter,
                   end:Alignment.center,
@@ -78,8 +81,8 @@ class _DashboardScreenState extends State<DashboardScreen> {
               right: 0,
               bottom: 0,
               child:CurvedNavigationBar(
-                  height: 75,
-                  color: const Color.fromARGB(255, 23, 23, 23),
+                  height: 60,
+                  color: const Color.fromARGB(255, 25, 25, 25),
                   items: items,
                   backgroundColor: Colors.transparent,
                 ),
@@ -88,7 +91,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
         ),
         
       ),
-    
+      ),
     );
   }
   }
