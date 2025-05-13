@@ -28,13 +28,7 @@ class _LoginScreenState extends State<LoginScreen> {
       backgroundColor: Colors.black,
       body: SafeArea(
         child: Center(
-          child: Container(
-            height: 500,
-            width: 600,
-            decoration: BoxDecoration(
-              color: const Color(0xFF121212),
-              borderRadius: BorderRadius.circular(20),
-            ),
+          child: Padding(
             padding: const EdgeInsets.all(24),
             child: Form(
               key: _formKey,
@@ -137,6 +131,14 @@ class _LoginScreenState extends State<LoginScreen> {
                     onPressed: () {},
                     child: const Text(
                       'Forgot password?',
+                      style: TextStyle(color: Colors.white70),
+                    ),
+                  ),
+                  const SizedBox(height: 12),
+                  TextButton(
+                    onPressed: () {},
+                    child: const Text(
+                      'Sign Up',
                       style: TextStyle(color: Colors.white70),
                     ),
                   ),
