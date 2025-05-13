@@ -1,11 +1,25 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:nexora/topic_generation.dart';
+import 'package:nexora/progress_screen.dart';
 
 void main() {
   runApp(const DashboardScreen());
 }
 
+void screenShifter(BuildContext context,int index){
+
+  switch (index) {
+    case 0: Navigator.push(context,MaterialPageRoute(builder: (context) => const DashboardScreen()));
+    break;
+    case 1: Navigator.push(context,MaterialPageRoute(builder: (context) => const TopicGenScreen()));
+    break;
+    case 2: Navigator.push(context,MaterialPageRoute(builder: (context) => const ProgressScreen()));
+    break;
+    
+  }
+}
 class DashboardScreen extends StatefulWidget {
   const DashboardScreen({super.key});
   @override
@@ -13,6 +27,7 @@ class DashboardScreen extends StatefulWidget {
 }
 
 class _DashboardScreenState extends State<DashboardScreen> {
+  int index = 0;
   @override
   void initState() {
     super.initState();
@@ -81,10 +96,13 @@ class _DashboardScreenState extends State<DashboardScreen> {
               right: 0,
               bottom: 0,
               child:CurvedNavigationBar(
-                  height: 60,
+                  height: 65,
                   color: const Color.fromARGB(255, 25, 25, 25),
                   items: items,
+                  index:index,
                   backgroundColor: Colors.transparent,
+                  buttonBackgroundColor: Color.fromARGB(255, 28, 28, 28),
+                  onTap:(index) => screenShifter(context,index)
                 ),
               ),
           ],
