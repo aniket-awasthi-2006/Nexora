@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:nexora/dashboard_screen.dart';
+import 'package:nexora/navigations.dart';
 
 void main() {
   runApp(const SplashScreen());
@@ -19,7 +19,7 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
 
     Timer(Duration(seconds:7), () {
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => DashboardScreen()));
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Navigations()));
     });
   }
 
