@@ -7,6 +7,7 @@ import 'package:nexora/home_screen.dart';
 
 void main() {
   runApp(
+    
     const MaterialApp(debugShowCheckedModeBanner: false, home: Navigations()),
   );
 }
